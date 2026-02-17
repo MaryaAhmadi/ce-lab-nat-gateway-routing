@@ -1,0 +1,5 @@
+Route Table ID: rtb-0cdf572c269730585
+Associated Subnets: private-subnet-1a (subnet-0894f06b0a139ba97)
+Routes:
+    10.0.0.0/16 -> local
+    0.0.0.0/0  -> (none)

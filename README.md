@@ -1,6 +1,6 @@
 # Lab M3.02 - Configure NAT Gateway and Routing
 
-**Repository:** [https://github.com/cloud-engineering-bootcamp/ce-lab-nat-gateway-routing](https://github.com/cloud-engineering-bootcamp/ce-lab-nat-gateway-routing)
+**Repository:** https://github.com/MaryaAhmadi/ce-lab-nat-gateway-routing.git
 
 **Activity Type:** Individual  
 **Estimated Time:** 45-60 minutes
@@ -391,13 +391,32 @@ Answer in your README:
 
 1. **Why is NAT Gateway deployed in public subnet, not private?**
 
+NAT Gateway needs direct access to the Internet Gateway (IGW) to route outbound traffic for private instances. A public subnet has a route to the IGW, while a private subnet does not. Deploying NAT in a private subnet would prevent it from reaching the internet.
+
+
 2. **What happens if NAT Gateway fails?**
+
+If the NAT Gateway fails, private instances lose outbound internet access. Applications that require updates, package downloads, or external API calls from private instances will fail until the NAT Gateway is restored.
+
 
 3. **How much would it cost to run NAT Gateway for a year with 200GB/month data?**
 
+NAT Gateway hourly cost: $0.045/hour × 730 hours ≈ $32.85/month
+Data processing: $0.045/GB × 200GB = $9.00/month
+Monthly total ≈ $41.85
+Annual total ≈ $41.85 × 12 ≈ $502.20
+
 4. **Why can't you SSH directly to the NAT Gateway's public IP?**
 
+NAT Gateway is a managed AWS service, not an EC2 instance. It does not have SSH access or a login shell. Its sole purpose is routing traffic from private instances to the internet.
+
+
 5. **What are the security benefits of using NAT Gateway vs giving instances public IPs?**
+
+Private instances remain hidden from the internet; no direct inbound connections are possible.
+Outbound traffic is allowed, but unsolicited inbound traffic is blocked.
+Reduces attack surface compared to assigning public IPs to each instance.
+
 
 ## Bonus Challenges
 

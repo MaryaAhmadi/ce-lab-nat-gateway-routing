@@ -1,0 +1,31 @@
+{
+    "NatGateways": [
+        {
+            "CreateTime": "2026-02-17T13:10:20+00:00",
+            "NatGatewayAddresses": [
+                {
+                    "AllocationId": "eipalloc-0710e02327ca169fe",
+                    "NetworkInterfaceId": "eni-0252c433bcb5c8e3e",
+                    "PrivateIp": "10.0.1.30",
+                    "PublicIp": "98.90.32.101",
+                    "AssociationId": "eipassoc-0599978158416e98b",
+                    "IsPrimary": true,
+                    "Status": "succeeded"
+                }
+            ],
+            "NatGatewayId": "nat-0eb3047352e646bea",
+            "State": "available",
+            "SubnetId": "subnet-07c497e852bc8f16c",
+            "VpcId": "vpc-0d9dac6d4af73ed53",
+            "Tags": [
+                {
+                    "Key": "Name",
+                    "Value": "bootcamp-nat-gw"
+                }
+            ],
+            "ConnectivityType": "public",
+            "AvailabilityMode": "zonal",
+            "AttachedAppliances": []
+        }
+    ]
+}

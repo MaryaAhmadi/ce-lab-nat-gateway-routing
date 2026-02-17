@@ -1,0 +1,6 @@
+
+
+Elastic IP Allocation ID: eipalloc-0abcd1234ef567890
+Elastic IP Public IP: 98.90.32.101
+Name tag: nat-gateway-eip
+Region: us-east-1
